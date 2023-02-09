@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    background-color: #121214;
+    background-image: url('../assets/background.svg');
+    background-position-x: center;
+    background-position-y: -715px;
+    background-repeat: no-repeat;
+}
+
+body * {
+    font-family: 'Roboto', sans-serif;
+}
+
+#app {
+    width: fit-content;
+    margin: 53px auto;
+}
+
+header {
+    margin-bottom: 63px;
+    text-align: center;
+}
+
+#cards {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.card {
+    padding: 32px 23px;
+    text-align: center;
+    background-color: #1d1c19;
+    border-bottom: 2px solid #f7dd43;
+    border-radius: 6px;
+    
+}
+
+.card h2 {display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-bottom: 53px;
+    padding: 8px 16px;
+    border: 1px solid #746615;
+    border-radius: 6px;
+    width: fit-content;
+    margin-inline: auto;
+    color: #f7dd43;
+}
+
+.card  h2 span {
+    color: #e1e1e6;
+    font-size: 14px;
+}
+
+.card ul {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 270px;
+}
+
+.card ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card ul li strong {
+    font-size: 36px;
+    font-weight: 900;
+    color: #e1e1e6;
+    line-height: 125%;
+}
+
+.card ul li + li {
+    border-top: 1px solid #f7dd43;
+    padding-top: 24px;
+    
+}

@@ -33,7 +33,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 O Projeto Calendário da Copa é um projeto para ajudar a acompanhar os jogos das da copa.
 
-- [Visite o projeto online](https://l-teles594.github.io/Habit-Tracker/)
+- [Visite o projeto online](https://l-teles594.github.io/CalendarioCopa/)
 
 ## 🔖 Layout
 

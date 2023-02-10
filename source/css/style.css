@@ -6,16 +6,38 @@
     box-sizing: border-box;
 }
 
+:root {
+    --color-primary: #f7dd43;
+    --card-heading-border-color: #746615;
+    --card-bg-color: #1d1c19;
+    --background-yellow:url('../assets/background-yelow.svg');
+}
+
+body.blue{
+    --color-primary: #338af3;
+    --card-heading-border-color: #338af3;
+    --card-bg-color: #202024;
+    --background-yellow:url('../assets/background-blue.svg');
+}
+
+body.green {
+    --color-primary: #047c3f;
+    --card-heading-border-color: #047c3f;
+    --card-bg-color: #1a1f1b;
+    --background-yellow:url('../assets/background-green.svg');
+}
+
 ul {
     list-style: none;
 }
 
 body {
     background-color: #121214;
-    background-image: url('../assets/background.svg');
-    background-position-x: center;
-    background-position-y: -715px;
+    background-image: var(--background-yellow);
+    background-position: top center;
     background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 body * {
@@ -24,7 +46,8 @@ body * {
 
 #app {
     width: fit-content;
-    margin: 53px auto;
+    margin: auto;
+    padding-top: 52px;
 }
 
 header {
@@ -40,19 +63,21 @@ header {
 
 .card {
     padding: 32px 23px;
-    text-align: center;
-    background-color: #1d1c19;
-    border-bottom: 2px solid #f7dd43;
+    background-color: var(--card-bg-color);
+    border-bottom: 2px solid var(--color-primary);
     border-radius: 6px;
-    
+    opacity: 0 ;
+    animation: appear 0.2s forwards;
 }
 
-.card h2 {display: flex;
-    gap: 16px;
+.card h2 {
+    display: flex;
+    align-items: center;
     justify-content: center;
+    gap: 16px;
     margin-bottom: 53px;
     padding: 8px 16px;
-    border: 1px solid #746615;
+    border: 1px solid var(--card-heading-border-color);
     border-radius: 6px;
     width: fit-content;
     margin-inline: auto;
@@ -62,6 +87,7 @@ header {
 .card  h2 span {
     color: #e1e1e6;
     font-size: 14px;
+    text-transform: uppercase;
 }
 
 .card ul {
@@ -85,7 +111,35 @@ header {
 }
 
 .card ul li + li {
-    border-top: 1px solid #f7dd43;
+    border-top: 1px solid var(--color-primary);
     padding-top: 24px;
     
+}
+
+.card h2:hover,
+.card ul li strong:hover,
+.card ul li img:hover {
+    transition: 0.5s all ease-in-out;
+    transform: scale(1.1);
+}
+
+
+@keyframes appear {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (min-width: 700px) {
+    #cards {
+        max-width: 670px;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+    }
 }

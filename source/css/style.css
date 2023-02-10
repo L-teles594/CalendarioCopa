@@ -50,6 +50,45 @@ body * {
     padding-top: 52px;
 }
 
+.select-color {
+    justify-content: space-between;
+    border: 1px solid var(--color-primary);
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+}
+
+.select-color * {
+    color: #e1e1e6;
+}
+
+.select-color button {
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+.colors img{
+    width: 30px;
+    background-color: transparent;
+}
+
+.options {
+    display: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+
 header {
     margin-bottom: 63px;
     text-align: center;
@@ -142,4 +181,18 @@ header {
         flex-wrap: wrap;
 
     }
+    
 }
+
+@media (max-width: 500px) {
+    .colors span {
+        display: none;
+    }
+    
+    .select-color {
+        width: 32px;
+    }
+}
+
+
+

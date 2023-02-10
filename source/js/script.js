@@ -1,5 +1,3 @@
-
-
 function createGame (player1,hour, player2) {
     return `
         <li>
@@ -27,3 +25,30 @@ document.querySelector('#cards').innerHTML =
             createCard('28/11', 'sexta', createGame('brazil', '16:00', 'cameron') + createGame('serbia', '16:00', 'south-korea'))
             
         
+const colorButton = document.querySelector('.colors');
+const colorOptions = document.querySelector('.options');
+const blueOption = document.querySelector('.blue');
+const yellowOption = document.querySelector('.yellow');
+const greenOption = document.querySelector('.green');
+
+colorButton.addEventListener('click', () => {
+    if (colorOptions.style.display === 'none') {
+        colorOptions.style.display = 'block';
+    }else if (colorOptions.style.display === 'block') {
+        colorOptions.style.display = 'none';
+    }
+})
+
+
+
+blueOption.addEventListener('click', () => {
+    document.body.className = "blue"
+})
+
+yellowOption.addEventListener('click', () => {
+    document.body.className = "yellow"
+})
+
+greenOption.addEventListener('click', () => {
+    document.body.className = "green"
+})
